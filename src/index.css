@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  background: #F5F5F5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.header__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.header__time {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #808080;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 370px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.search__field {
+  display: flex;
+  align-items: center;
+  width: 290px;
+  height: 100%;
+  padding: 15px 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.search__field-input {
+  width: 250px;
+  height: 100%;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #808080;
+}
+
+.search__field-input:focus {
+  outline: none;
+}
+
+.search__button {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 10px;
+  background: #000000;
+  background-image: url(./img/search.svg);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.location-button {
+  width: 160px;
+  height: 60px;
+  background: #138ABD;
+  border-radius: 10px;
+  border: 0;
+
+  background-image: url(./img/location.svg);
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.location-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.day-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.day-info img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.day-info__temperature {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+
+.day-info__feel-like {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.day-info__description {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.day-detailed-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 210px;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.day-detailed-info__point {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.week-forecast {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+}
+
+.week-forecast__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+}
+
+.week-forecast__day img {
+  margin-bottom: 10px;
+}
+
+.week-forecast__day-text {
+  margin-bottom: 10px;
+}
+
+
+.sunrise-sunset {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+}
+
+.trajectory__wrapper {
+  overflow: hidden;
+  padding-top: 25px;
+  width: 350px;
+  height: 150px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.trajectory {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px dashed lightblue;
+}
+
+.sun {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  left: 150px; /* 350 */
+  bottom: -25px;
+
+  background-image: url(https://funart.pro/uploads/posts/2021-12/1640326978_72-funart-pro-p-belie-foni-s-solntsem-74.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.moon {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  left: 150px; /* 350 */
+  bottom: 0px;
+
+  background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614547107_1-p-luna-na-belom-fone-1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.time {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  width: 75px;
+  height: 100%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #808080;
+}
